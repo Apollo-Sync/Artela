@@ -1,16 +1,23 @@
 # Artela
-artela.network
-https://x.com/Artela_Network
-https://discord.com/invite/artela
 
-# Clone project repository
+Website: artela.network
+
+X      : https://x.com/Artela_Network
+
+Discord: https://discord.com/invite/artela
+
+**Clone project repository**
+```
 cd && rm -rf artela
 git clone https://github.com/artela-network/artela
 cd artela
 git checkout v0.4.7-rc7-fix-execution
+```
 
-# Build binary
+**Build binary**
+```
 make install
+```
 
 # Set node CLI configuration
 artelad config chain-id artela_11820-1
