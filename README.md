@@ -19,14 +19,17 @@ git checkout v0.4.7-rc7-fix-execution
 make install
 ```
 
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 artelad config chain-id artela_11820-1
 artelad config keyring-backend test
 artelad config node tcp://localhost:27857
+```
 
-# Initialize the node
+**Initialize the node**
+```
 artelad init "Your Node Name" --chain-id artela_11820-1
-
+```
 # Download genesis and addrbook files
 curl -L https://snapshots-testnet.nodejumper.io/artela-testnet/genesis.json > $HOME/.artelad/config/genesis.json
 curl -L https://snapshots-testnet.nodejumper.io/artela-testnet/addrbook.json > $HOME/.artelad/config/addrbook.json
