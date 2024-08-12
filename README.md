@@ -32,8 +32,8 @@ artelad init "Your Node Name" --chain-id artela_11820-1
 ```
 **Download genesis and addrbook files**
 ```
-curl -L https://snapshots-testnet.nodejumper.io/artela-testnet/genesis.json > $HOME/.artelad/config/genesis.json
-curl -L https://snapshots-testnet.nodejumper.io/artela-testnet/addrbook.json > $HOME/.artelad/config/addrbook.json
+curl -L https://raw.githubusercontent.com/Apollo-Sync/Artela/main/genesis.json > $HOME/.artelad/config/genesis.json
+curl -L https://raw.githubusercontent.com/Apollo-Sync/Artela/main/addrbook.json > $HOME/.artelad/config/addrbook.json
 ```
 
 **Set seeds**
