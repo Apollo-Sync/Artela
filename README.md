@@ -41,15 +41,19 @@ curl -L https://raw.githubusercontent.com/Apollo-Sync/Artela/main/addrbook.json 
 sed -i -e 's|^seeds *=.*|seeds = "211536ab1414b5b9a2a759694902ea619b29c8b1@47.251.14.47:26656,d89e10d917f6f7472125aa4c060c05afa78a9d65@47.251.32.165:26656,bec6934fcddbac139bdecce19f81510cb5e02949@47.254.24.106:26656,32d0e4aec8d8a8e33273337e1821f2fe2309539a@47.88.58.36:26656,1bf5b73f1771ea84f9974b9f0015186f1daa4266@47.251.14.47:26656"|' $HOME/.artelad/config/config.toml
 ```
 
-# Set minimum gas price
+**Set minimum gas price**
+```
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "20000000000uart"|' $HOME/.artelad/config/app.toml
+```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.artelad/config/app.toml
+```
 
 # Change ports
 sed -i -e "s%:1317%:27817%; s%:8080%:27880%; s%:9090%:27890%; s%:9091%:27891%; s%:8545%:27845%; s%:8546%:27846%; s%:6065%:27865%" $HOME/.artelad/config/app.toml
