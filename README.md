@@ -66,7 +66,8 @@ sed -i -e "s%:26658%:27858%; s%:26657%:27857%; s%:6060%:27860%; s%:26656%:27856%
 curl "https://snapshots-testnet.apollo-sync.com/artela-testnet/artela-testnet_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.artelad"
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/artelad.service > /dev/null << EOF
 [Unit]
 Description=Artela node service
@@ -80,8 +81,11 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
+```
 sudo systemctl daemon-reload
 sudo systemctl enable artelad.service
+```
 
 # Start the service and check the logs
 sudo systemctl start artelad.service
