@@ -82,11 +82,14 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 ```
+
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable artelad.service
 ```
 
-# Start the service and check the logs
+**Start the service and check the logs**
+```
 sudo systemctl start artelad.service
 sudo journalctl -u artelad.service -f --no-hostname -o cat
+```
