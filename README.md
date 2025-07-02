@@ -1,4 +1,4 @@
-# Artela
+**Artela**
 
 Website: artela.network
 
